@@ -59,3 +59,15 @@ just type `>docker`
 new "management command" format 
 
 > docker <command> <sub-command> (options)
+
+
+# Image vs. Conatiners
+
+An Image is the application we want to run
+	- binaries
+	- source code
+
+A Container is an instance of that image running as a process
+- You can have many containers running off the same image
+
+
