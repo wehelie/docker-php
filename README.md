@@ -70,4 +70,63 @@ An Image is the application we want to run
 A Container is an instance of that image running as a process
 - You can have many containers running off the same image
 
+# Starting a Nginx Webserver
+
+> docker container run --publish 80:80 nginx
+
+What is happenning? 
+- Download image 'nginx' form Docker Hub
+- Started a new container from that image
+- Opened port 80 on the host IP
+
+If we don't want to run this in the foreground, we can add the following:
+
+> docker container run --publish 80:80 --detach nginx
+
+Now, it is running the background. We also get back a unique container id. 
+
+# docker container ls 
+- lists running containers 
+
+- names are generated from an open-source list of scientists and hackers i.e. priceless_pare
+
+However, you can specify name for a container by running the following command
+
+> docker container run --publish 80:80 --detach --name webhost nginx
+
+
+# docker container stop + (container id)
+- stops containers but does not remove it
+
+
+# How to see logs for --detached containers
+
+> docker container logs [name of the host]
+
+To get more options, you can use --help
+
+
+# Remove Containers
+
+> docker container rm [container id(s)]
+
+
+# What happens in the background when we run the `docker container run` command
+
+1. looks for the image specified at the end of the command locally in image cache
+
+if it does not find it there, 
+
+2. Then it looks in the remote image repo (defaults to Docker Hub)
+
+3. Downloads the latest version (nginx: latest by default)
+
+
+
+
+
+
+
+
+
 
