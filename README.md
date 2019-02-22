@@ -10,7 +10,7 @@
 just type `>docker`
 
 ### Commands:
-
+```
   attach      Attach local standard input, output, and error streams to a running container
   build       Build an image from a Dockerfile
   commit      Create a new image from a container's changes
@@ -51,6 +51,7 @@ just type `>docker`
   update      Update configuration of one or more containers
   version     Show the Docker version information
   wait        Block until one or more containers stop, then print their exit codes
+```
 
 
 ### Docker command format:
